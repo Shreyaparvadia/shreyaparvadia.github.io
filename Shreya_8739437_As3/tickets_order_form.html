@@ -1,0 +1,157 @@
+	<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Event Tickets Order Form</title>
+		<link rel="stylesheet" type="text/css" href="styles/normalize.css">
+		<link rel="stylesheet" type="text/css" href="styles/main.css">		
+	</head>
+
+	<body>
+		<div id="frame">
+			<header>
+				<img src="images/ornament-logo.png" alt="New Year Central Logo" style="width: 400px;">
+				<div id="header-line-1">New Year Central</div>
+				<div id="header-line-2">For the child in all of us!</div>
+			</header>
+
+			<!-- navigation starts -->
+			<nav id="nav_menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about_us.html">About Us</a></li>
+					<li><a href="products.html">Our Products</a></li>
+					<li><a href="tickets_order_form.html" class="current">Event Tickets</a></li>
+					<li><a href="contact_us.html">Contact Us</a></li>
+				</ul>
+			</nav>
+			
+			<aside>
+				<div class="sidebar-title">Products of The Week...</div>
+				<ul>
+					<li><a href="assets/products/berry-garland.html">Natural Holly Berry Garland, 5f - $74.99</a></li>
+					<li><a href="assets/products/artificial-red-berry-garland.html">Artificial Red Berry and White Edge Holly Leaf Christmas Garland, 5.5f - $38.99</a></li>
+					<li><a href="assets/products/christmas-berries-stems.html">Christmas Berries Red Stems Evergreen Pine Branches, 8pcs - $15.99</a></li>
+				</ul>
+			</aside>
+			
+			<main>
+				<h1>Order Event Tickets</h1>
+				<!-- The form starts here... -->
+				
+				<!-- Creating form element   -->
+			<form name="order_form" id="order_form" action="place_order.html" method="post">
+					
+				<!--Creating part 1 of form-->
+				<fieldset>
+					<!-- asking member information -->
+					<legend>Member Information</legend>  <!-- Topic Member Information -->
+					<label for="email_id">Email:</label>
+					<input type="text" name="email_id" id="email_id" accesskey="E" autofocus class="blackbor"><br> <!-- asking for email id added autofocus to this label -->
+					<label for="first_name">First Name:</label>
+					<input type="text" name="first_name" id="first_name" accesskey="F" class="orangebor"><br>  <!-- asking for first name -->
+					<label for="last_name">Last Name:</label>
+					<input type="text" name="last_name" id="last_name" accesskey="L" class="orangebor"><br>  <!-- asking for last name -->
+					<label for="address">Address:</label>
+					<input type="text" name="address" id="address" accesskey="D"><br>  <!-- asking for address -->
+					<label for="city">City:</label>
+					<input type="text" name="city" id="city" accesskey="C"><br>  <!-- asking for city -->
+					<label for="province">Province:</label>
+					<input type="text" name="province" id="province" accesskey="P" placeholder="2-character code" class="orangebor"><br> <!-- aasking for province & added placeholder -->
+					<label for="postal_code">Postal Code:</label>
+					<input type="text" name="postal_code" id="postal_code" accesskey="O" placeholder="6 character" class="orangebor"><br> <!-- asking for postal code & added placeholder-->
+					<label for="phone">Phone number:</label>
+					<input type="text" name="phone" id="phone" accesskey="N" placeholder="999-999-9999"> <!--added placeholder-->
+			    </fieldset>
+					
+				<!--Creating Part 2 of form-->
+				<fieldset>
+					<!--asking about order information -->
+					<legend>Ordering Information</legend>  <!-- Topic Ordering Information-->
+					
+					<label for="event">Event:</label>  
+					<select id="event" name="event">  <!-- drop down list for the type of events-->
+					  <option value=" Cookie Decoration Contest" selected> Cookie Decoration Contest</option>
+					  <option value="Tree Decoration Contest">Tree Decoration Contest</option>	
+					  <option value="Gift of Light Ride-Along">Gift of Light Ride-Along</option>
+					  <option value="Breakfast with Santa">Breakfast with Santa</option>
+					</select><br>
+				
+					<label for="ordertype">Order Type:</label>
+					<select id="ordertype" name="ordertype">  <!-- drop down list for the order type-->
+					  <option value=" Member Package" selected> Member Package</option>
+					  <option value="Donor Package">Donor Package</option>	
+					  <option value="Single Tickets">Single Tickets</option>
+					</select><br>
+					
+					<label for="numberoftickets">Number of Tickets:</label>  <!-- asking for numer of single tickets -->
+					<input type="text" name="numberoftickets" id="numberoftickets" accesskey="N" placeholder="Number of single tickets"><br>
+					
+				</fieldset>
+					
+				<!--Creating part 3 of form-->
+				<fieldset>
+					<legend>Payment Method</legend>  <!-- Topic Payment Method -->
+					<input type="radio" name="payment" value="Bill Me" class="card">Bill Me  <!-- applied radio buttons and added class element -->
+					<input type="radio" name="payment" value="Credit Card" class="card">Credit Card  <!-- applied radio buttons and added class element -->
+				</fieldset>
+					
+				<!--Creating part 4 of form-->
+				<fieldset>
+					<legend>Credit Card Information</legend>  <!--Topic Credit Card Information-->
+					<label for="cardtype">Card Type:</label>  <!--applying drop down list for credit card options-->
+					<select id="cardtype" name="cardtype">
+					  <option value="  Visa" selected>  Visa</option>
+					  <option value="Master Card">Master Card</option>	
+					  <option value="Discover">Discover</option>
+					</select><br>
+					
+					<label for="cardnumber">Card Number:</label>  <!--Topic Card Number-->
+					<input type="text" name="cardnumber" id="cardnumber" accesskey="C" placeholder="16 digits"><br>  <!-- asking for card number and applied placeholder -->
+					
+					<label for="expirationdate">Expiration Date:</label>  <!-- TopicExpiration Date -->
+					<select id="expirationdate" name="expirationdate" class="month">  <!-- drop down list for expiration month of card and added class element-->
+						<option value=" January" selected>January</option>
+						<option value="Febuary">Febuary</option>	
+						<option value="March">March</option>
+						<option value="April">April</option>
+						<option value="May">May</option>
+						<option value="June">June</option>
+						<option value="July">July</option>
+						<option value="August">August</option>
+						<option value="September">September</option>
+						<option value="October">October</option>
+						<option value="November">November</option>
+						<option value="December">December</option>
+					</select>
+					
+					<select id="expirationyear" name="expirationyear" class="year">  <!-- drop down list for expiration year of the card and added class element-->
+						<option value="2021" selected>2021</option>  <!-- drop down list for expiration year of card -->
+						<option value="2022">2022</option>	
+						<option value="2023">2023</option>
+						<option value="2024">2024</option>
+						<option value="2025">2025</option>
+						<option value="2026">2026</option>
+						<option value="2027">2027</option>
+					</select>
+
+				</fieldset>
+					
+				<!--Creating part 4 of form-->
+				<fieldset id="buttons">
+					<legend>Submit your Order</legend>  <!--Topic Sumit Order-->
+					<label>&nbsp;</label>
+					<input type="submit" id="submit" value="Submit">
+					<input type="reset" id="reset" value="Reset Fields">
+				</fieldset>
+					
+			</form>
+				
+			</main>
+			
+			<footer>
+				<p>&copy; 2021 New Year Central. Created by Johnny White.</p>
+			</footer>
+		</div>
+	</body>
+</html>
